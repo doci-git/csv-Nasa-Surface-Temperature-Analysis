@@ -12,17 +12,13 @@ async function getData() {
         const year = colums[0];
         xlabels.push(year)
         const temp = colums[1];
-        ytemps.push(temp)
-        const boo = colums[2]
-        yboo.push(boo)
-        console.log(year, temp, boo);
+        ytemps.push(parseFloat(temp) + 14)
+        console.log(year, temp);
     });
 
 }
 const xlabels = []
 const ytemps = []
-const yboo= []
-
 async function charted() {
     await getData()
     const ctx = document.getElementById('myChart').getContext('2d');
@@ -34,19 +30,21 @@ async function charted() {
             datasets: [{
                 label: 'GISS Surface Temperature Analysis',
                 data: ytemps,
-                data: yboo,
-                backgroundColor: 
-                    'rgba(255, 99, 132, 0.2)',
-                borderColor: 
-                    'rgba(255, 99, 132, 1)',
-                   
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+
                 borderWidth: 1
             }]
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, ticks) {
+                            return '°' + value;
+                        }
+                    }
                 }
             }
         }
