@@ -12,13 +12,15 @@ async function getData() {
         const year = colums[0];
         xlabels.push(year)
         const temp = colums[1];
-        ytemps.push(parseFloat(temp) + 14)
+        ytemps.push(parseFloat(temp) + 14);
         console.log(year, temp);
     });
 
 }
 const xlabels = []
 const ytemps = []
+
+
 async function charted() {
     await getData()
     const ctx = document.getElementById('myChart').getContext('2d');
