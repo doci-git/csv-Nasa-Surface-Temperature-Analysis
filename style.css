@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform:capitalize ;
+}
