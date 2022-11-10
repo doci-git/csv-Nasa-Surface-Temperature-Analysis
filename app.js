@@ -44,7 +44,7 @@ async function charted() {
                     ticks: {
                         // Include a dollar sign in the ticks
                         callback: function(value, index, ticks) {
-                            return '°' + value;
+                            return value + '°';
                         }
                     }
                 }
