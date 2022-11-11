@@ -12,7 +12,7 @@ async function getData() {
         const year = colums[0];
         xlabels.push(year)
         const temp = colums[1];
-        ytemps.push(parseFloat(temp) + 14);
+        ytemps.push(parseFloat(temp) + 1);
         console.log(year, temp);
     });
 
