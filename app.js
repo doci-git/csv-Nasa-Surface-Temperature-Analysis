@@ -1,4 +1,4 @@
-getData()
+//getData()
 charted()
 
 async function getData() {
@@ -43,7 +43,7 @@ async function charted() {
                 y: {
                     ticks: {
                         // Include a dollar sign in the ticks
-                        callback: function(value, index, ticks) {
+                        callback: function(value,) {
                             return value + '°';
                         }
                     }
